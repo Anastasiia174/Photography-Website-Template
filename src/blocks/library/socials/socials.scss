@@ -1,0 +1,29 @@
+.socials {
+    $blocks: &;
+    &__link {
+        display: inline-block;
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+        background: url(../images/sprite.png) no-repeat;
+        &_fb {
+            background-position: 8px 0;
+        }
+        &_tw {
+            background-position: -32px 0;
+        }
+        &_in {
+            background-position: -80px 0;
+        }
+        &_sm {
+            background-position: -125px 0;
+        }
+    }
+    &_right_bottom {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+    }
+}

@@ -1,0 +1,30 @@
+<div class="home-section home-section_theme_girl home-section_height_100vh">
+    <div class="home-section__wrapper">
+        <div class="home-section__header">
+            <div class="home-section__logo">
+                <img class="logo__img" src="assets/images/logo.png" alt="">
+            </div>
+            <div class="home-section__navbar">
+                @@include('../navbar/navbar.html')
+            </div>
+        </div>
+        <div class="home-section__title">
+            Hello, I'm <span class="nowrap">Dakota Jhonson</span>
+        </div>
+        <div class="home-section__text">
+            I'm an Art Director & Photographer based in the San Francisco.
+        </div>
+        <div class="home-section__btn">
+            @@include('../../utils/btn/btn.html', {
+                "value": "See my works",
+                "class": "btn_yellow"
+            })
+        </div>
+        <div class="home-section__socials">
+            @@include('../socials/socials.html')
+        </div>
+        <div class="home-section__btn-arrow">
+            @@include('../../utils/arrow/arrow.html')
+        </div>
+    </div>
+</div>

@@ -2,6 +2,7 @@
 @import './helpers/fonts.scss';
 @import './helpers/base.scss';
 @import './helpers/reset.scss';
+@import './helpers/common.scss';
 
-//@import '../blocks/library/**/*.scss';
-//@import '../blocks/utils/**/*.scss';
+@import '../blocks/library/**/*.scss';
+@import '../blocks/utils/**/*.scss';

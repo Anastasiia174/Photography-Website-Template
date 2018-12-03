@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photography Portfolio Website</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+    @@include('main/main.html')
+    <script>
+        var smallCardsImages = Array.from(document.querySelectorAll('.small-card__img'));
+        smallCardsImages.forEach(function(card) {
+            card.style.backgroundImage = 'url(' + card.dataset.src + ')';
+        });
+
+    </script>
+</body>
+</html>

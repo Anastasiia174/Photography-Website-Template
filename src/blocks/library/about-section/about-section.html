@@ -1,0 +1,41 @@
+<div class="about-section about-section_theme_rectangle about-section_height_100vh">
+    <div class="about-section__wrapper">
+        <div class="about-section__aside">
+            <img class="about-section__aside-pic" src="assets/images/about-pic.jpg" alt="">
+        </div>
+        <div class="about-section__main">
+            <div class="about-section__title">
+                About MySelf
+            </div>
+            <div class="about-section__text">
+                Hey, thanks for stopping by. My name's Dakota Jhonson junior and I'm a brilliant Art Director and photographer based in the San Francisco where I make cool things for agencies and brands around globe. Mentals is laaded with useful features, each one its own meaningful purpose. We listen to our users and integrate their features requestes on a regular basis. If you like my work then please do not hesitate to reach out.
+            </div>
+            <div class="about-section__subtitle">
+                What I do?
+            </div>
+            <div class="about-section__cards">
+                @@include('../small-card/small-card.html', {
+                    "class": "small-card_mr_10",
+                    "title": "Fashion",
+                    "img": "assets/images/small-card-1.jpg"
+                })
+                @@include('../small-card/small-card.html', {
+                    "class": "small-card_mr_10",
+                    "title": "Portraites",
+                    "img": "assets/images/small-card-2.jpg"
+                })
+                @@include('../small-card/small-card.html', {
+                    "class": "small-card_mr_10",
+                    "title": "Lifestyle",
+                    "img": "assets/images/small-card-3.jpg"
+                })
+            </div>
+            <div class="about-section_btn">
+                @@include('../../utils/btn/btn.html', {
+                    "class": "btn_dark btn_uppercase",
+                    "value": "View my flickr profile"
+                })
+            </div>
+        </div>
+    </div>
+</div>

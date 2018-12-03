@@ -1,0 +1,18 @@
+.small-card {
+    $blocks: &;
+    &__title {
+        padding-bottom: 10px;
+        font: 500 100% $Muli;
+        text-transform: uppercase;
+    }
+    &__img {
+        width: 130px;
+        height: 130px;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+    }
+    &_mr_10 {
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,22 @@
+.btn {
+    $blocks: &;
+    display: inline-block;
+    max-width: 100%;
+    padding: 15px 35px;
+    border-style: none;
+    border-radius: 30px;
+    font-family: 'Muli';
+    font-weight: 500;
+
+    &_yellow {
+        background-color: #F2C200;
+        color: #433F51;
+    }
+    &_dark {
+        background-color: #2B2D5C;
+        color: $text_color_main;
+    }
+    &_uppercase {
+        text-transform: uppercase;
+    }
+}

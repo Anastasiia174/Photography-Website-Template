@@ -1,0 +1,41 @@
+.home-section {
+    $blocks: &;
+    &__wrapper {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__header {
+        display: flex;
+        padding-top: 30px;
+    }
+    &__logo {
+        flex-grow: 2;
+    }
+    &__navbar {
+        flex-grow: 1;
+        font-family: $Muli;
+        font-weight: 500;
+        color: $text_color_main;
+    }
+    &__title {
+        width: 400px;
+        margin-top: 250px;
+        font: 300 350% $Trirong;
+        color: $text_color_main;
+    }
+    &__text {
+        margin: 30px 0 40px 0;
+        font: 200 120% $Muli;
+        color: $text_color_main;
+    }
+    &_theme_girl {
+        background: url(../images/bg-1.jpg) no-repeat center;
+        background-size: cover;
+    }
+    &_height_100vh {
+        height: 100vh;
+    }
+}
+

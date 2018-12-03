@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Muli';
+  src: url("../fonts/Muli/Muli-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Muli';
+  src: url("../fonts/Muli/Muli-SemiBold.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Trirong';
+  src: url("../fonts/Trirong/Trirong-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Trirong';
+  src: url("../fonts/Trirong/Trirong-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -161,3 +185,164 @@ table {
 
 input {
   font-family: inherit; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.text-center {
+  text-align: center; }
+
+.about-section__wrapper {
+  padding: 100px 250px 0 0;
+  height: 100%; }
+
+.about-section__aside {
+  float: left;
+  margin-right: 100px; }
+
+.about-section__main {
+  color: #2B2D5C; }
+
+.about-section__title {
+  font: 300 250% "Trirong", serif; }
+
+.about-section__text {
+  padding: 30px 0;
+  font: 200 120% "Muli", sans-serif; }
+
+.about-section__subtitle {
+  font: 300 170% "Trirong", serif;
+  margin-bottom: 30px; }
+
+.about-section__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 50px; }
+
+.about-section_theme_rectangle {
+  background-image: url("../images/bg-2.jpg"); }
+
+.about-section_height_100vh {
+  height: 100vh; }
+
+.home-section__wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+.home-section__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px; }
+
+.home-section__logo {
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2; }
+
+.home-section__navbar {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-family: "Muli", sans-serif;
+  font-weight: 500;
+  color: #FFF; }
+
+.home-section__title {
+  width: 400px;
+  margin-top: 250px;
+  font: 300 350% "Trirong", serif;
+  color: #FFF; }
+
+.home-section__text {
+  margin: 30px 0 40px 0;
+  font: 200 120% "Muli", sans-serif;
+  color: #FFF; }
+
+.home-section_theme_girl {
+  background: url(../images/bg-1.jpg) no-repeat center;
+  background-size: cover; }
+
+.home-section_height_100vh {
+  height: 100vh; }
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  .navbar__item {
+    margin: 0 25px; }
+  .navbar__link {
+    padding: 10px 5px; }
+    .navbar__link_active {
+      border-bottom: 2px solid #F2C200; }
+
+.small-card__title {
+  padding-bottom: 10px;
+  font: 500 100% "Muli", sans-serif;
+  text-transform: uppercase; }
+
+.small-card__img {
+  width: 130px;
+  height: 130px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; }
+
+.small-card_mr_10 {
+  margin-right: 10px; }
+
+.socials__link {
+  display: inline-block; }
+
+.socials__icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  background: url(../images/sprite.png) no-repeat; }
+  .socials__icon_fb {
+    background-position: 8px 0; }
+  .socials__icon_tw {
+    background-position: -32px 0; }
+  .socials__icon_in {
+    background-position: -80px 0; }
+  .socials__icon_sm {
+    background-position: -125px 0; }
+
+.socials_right_bottom {
+  position: absolute;
+  right: 0;
+  bottom: 15px; }
+
+.btn {
+  display: inline-block;
+  max-width: 100%;
+  padding: 15px 35px;
+  border-style: none;
+  border-radius: 30px;
+  font-family: 'Muli';
+  font-weight: 500; }
+  .btn_yellow {
+    background-color: #F2C200;
+    color: #433F51; }
+  .btn_dark {
+    background-color: #2B2D5C;
+    color: #FFF; }
+  .btn_uppercase {
+    text-transform: uppercase; }
+
+.container {
+  width: 1200px;
+  margin: 0 auto; }
+
+.container-fluid {
+  width: 100%; }

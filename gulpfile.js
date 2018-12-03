@@ -9,8 +9,9 @@ gulp.task('serve', ['sass'], function() {
     browserSync.init({
         server: "app/"
     });
-    gulp.watch("src/styles/*.scss", ['sass']);
-    gulp.watch("app/*.html").on('change', browserSync.reload);
+    gulp.watch("src/{blocks,pages,styles}/**/*.scss", ['sass']);
+    gulp.watch("src/{blocks,pages}/**/*.html", ['fileinclude']);
+    //gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('sass', function() {
@@ -25,10 +26,11 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 gulp.task('fileinclude', function() {
-    gulp.src("src/pages/main/index.html")
+    gulp.src("src/pages/index.html")
     .pipe(fileinclude({
         prefix: "@@",
         basepath: "@file"
     }))
-    .pipe(gulp.dest("app/"));
+    .pipe(gulp.dest("app/"))
+    .pipe(browserSync.stream());
 })

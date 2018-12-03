@@ -1,0 +1,14 @@
+.navbar {
+    $blocks: &;
+    display: flex;
+    justify-content: flex-end;
+    &__item {
+        margin: 0 25px;
+    }
+    &__link {
+        padding: 10px 5px;
+        &_active {
+            border-bottom: 2px solid #F2C200;
+        }
+    }
+}

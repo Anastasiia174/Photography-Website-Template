@@ -2,12 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Photography Portfolio Website</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__title">Alilya</div>
-    </header>
+    <div class="home-section home-section_theme_girl home-section_height_100vh">
+    <div class="home-section__wrapper">
+        <div class="home-section__header">
+            <div class="home-section__logo">
+                <img class="logo__img" src="assets/images/logo.png" alt="">
+            </div>
+            <div class="home-section__navbar">
+                 <ul class="navbar">
+    <li class="navbar__item">
+        <a class="navbar__link navbar__link_active" href=#>Home</a>
+    </li>
+    <li class="navbar__item">
+        <a class="navbar__link" href=#>About</a>
+    </li>
+    <li class="navbar__item">
+        <a class="navbar__link" href=#>Clients</a>
+    </li>
+    <li class="navbar__item">
+        <a class="navbar__link" href=#>Portfolio</a>
+    </li>
+    <li class="navbar__item">
+        <a class="navbar__link" href=#>Blog</a>
+    </li>
+</ul>
+            </div>
+        </div>
+        <div class="home-section__title">
+            Hello, I'm <span class="nowrap">Dakota Jhonson</span>
+        </div>
+        <div class="home-section__text">
+            I'm an Art Director & Photographer based in the San Francisco.
+        </div>
+        <div class="home-section__btn">
+            <button class="btn btn_yellow"> See my works</button>
+        </div>
+        <div class="home-section__socials">
+            <div class="socials socials_right_bottom">
+    <a class="socials__link" target="blank" title="Facebook" href="#">
+        <div class="socials__icon socials__icon_fb"></div>
+    </a>
+    <a class="socials__link" target="blank" title="Tweeter" href="#">
+        <div class="socials__icon socials__icon_tw"></div>
+    </a>
+    <a class="socials__link" target="blank" title="Instagram" href="#">
+        <div class="socials__icon socials__icon_in"></div>
+    </a>
+    <a class="socials__link" target="blank" title="Something" href="#">
+        <div class="socials__icon socials__icon_sm"></div>
+    </a>
+</div>
+        </div>
+        <div class="home-section__btn-arrow">
+            <button class="btn-arrow"></button>
+        </div>
+    </div>
+</div>
+<div class="about-section about-section_theme_rectangle about-section_height_100vh">
+    <div class="about-section__wrapper">
+        <div class="about-section__aside">
+            <img class="about-section__aside-pic" src="assets/images/about-pic.jpg" alt="">
+        </div>
+        <div class="about-section__main">
+            <div class="about-section__title">
+                About MySelf
+            </div>
+            <div class="about-section__text">
+                Hey, thanks for stopping by. My name's Dakota Jhonson junior and I'm a brilliant Art Director and photographer based in the San Francisco where I make cool things for agencies and brands around globe. Mentals is laaded with useful features, each one its own meaningful purpose. We listen to our users and integrate their features requestes on a regular basis. If you like my work then please do not hesitate to reach out.
+            </div>
+            <div class="about-section__subtitle">
+                What I do?
+            </div>
+            <div class="about-section__cards">
+                <div class="small-card small-card_mr_10">
+    <div class="small-card__title">
+        Fashion
+    </div>
+    <div class="small-card__img" data-src="assets/images/small-card-1.jpg">
+    </div>
+</div>
+                <div class="small-card small-card_mr_10">
+    <div class="small-card__title">
+        Portraites
+    </div>
+    <div class="small-card__img" data-src="assets/images/small-card-2.jpg">
+    </div>
+</div>
+                <div class="small-card small-card_mr_10">
+    <div class="small-card__title">
+        Lifestyle
+    </div>
+    <div class="small-card__img" data-src="assets/images/small-card-3.jpg">
+    </div>
+</div>
+            </div>
+            <div class="about-section_btn">
+                <button class="btn btn_dark btn_uppercase"> View my flickr profile</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clients-section">
+    <div class="clients-section__wrapper">
+        <div class="clients-section__title">
+            Happy Clients
+        </div>
+    </div>
+</div>
+
+    <script>
+        var smallCardsImages = Array.from(document.querySelectorAll('.small-card__img'));
+        smallCardsImages.forEach(function(card) {
+            card.style.backgroundImage = 'url(' + card.dataset.src + ')';
+        });
+
+    </script>
 </body>
 </html>
