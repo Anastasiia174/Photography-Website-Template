@@ -15,13 +15,18 @@
             I'm an Art Director & Photographer based in the San Francisco.
         </div>
         <div class="home-section__btn">
-            @@include('../../utils/btn/btn.html', {
+            <a href="#">
+                @@include('../../utils/btn/btn.html', {
                 "value": "See my works",
-                "class": "btn_yellow"
+                "class": "btn_yellow",
+                "type": "button"
             })
+            </a>
         </div>
         <div class="home-section__socials">
-            @@include('../socials/socials.html')
+            @@include('../socials/socials.html', {
+                "class": "socials_right_bottom"
+            })
         </div>
         <div class="home-section__btn-arrow">
             @@include('../../utils/arrow/arrow.html')

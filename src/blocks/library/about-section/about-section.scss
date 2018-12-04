@@ -1,12 +1,23 @@
 .about-section {
     $blocks: &;
     &__wrapper {
+        display: flex;
         padding: 100px 250px 0 0;
         height: 100%;
     }
     &__aside {
-        float: left;
         margin-right: 100px;
+    }
+    &__aside-pic {
+        @include adaptive-desktop() {
+            max-width: 500px;
+        }
+        @include adaptive-desktop-sm() {
+            max-width: 400px;
+        }
+        @include adaptive-tablet() {
+            max-width: 300px;
+        }
     }
     &__main {
         color: $text_color_second;
@@ -16,7 +27,7 @@
     }
     &__text {
         padding: 30px 0;
-        font: 200 120% $Muli;
+        font: 300 120% $Muli;
     }
     &__subtitle {
         font: 300 170% $Trirong;
@@ -28,9 +39,9 @@
         margin-bottom: 50px;
     }
     &_theme_rectangle {
-        background-image: url('../images/bg-2.jpg');
+        background-image: url('../images/bg-21.jpg');
     }
     &_height_100vh {
-        height: 100vh;
+        min-height: 100vh;
     }
 }

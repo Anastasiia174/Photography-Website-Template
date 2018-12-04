@@ -1,0 +1,28 @@
+.small-article-card {
+    $blocks: &;
+    &__wrapper {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    &__content {
+        padding: 0 20px;
+    }
+    &__text {
+        margin-bottom: 10px;
+        font: 300 100% $Muli;
+    }
+    &__category {
+        font: 500 100% $Muli;
+        &::after {
+            content: ' - ';
+        }
+    }
+    &__date {
+        font: 300 100% $Muli;
+    }
+    &__img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+}

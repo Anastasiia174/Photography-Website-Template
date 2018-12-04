@@ -1,4 +1,25 @@
 .clients-section {
     $blocks: &;
-    
+    &__wrapper {
+        width: 80%;
+        margin: 0 auto;
+        padding: 60px 0;
+    }
+    &__title {
+        font: 300 250% $Trirong;
+        color: $text_color_main;
+    }
+    &__brands {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__brand-img {
+        max-width: 180px;
+    }
+    &_theme_hands {
+        background: url(../images/bg-3.jpg) no-repeat;
+        background-size: cover;
+    }
 }

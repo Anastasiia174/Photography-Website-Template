@@ -1,0 +1,33 @@
+.blog-section {
+    $blocks: &;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 60px;
+    }
+    &__title {
+        text-align: center;
+        font: 300 250% $Trirong;
+        color: $text_color_second;
+        margin-bottom: 30px;
+    }
+    &__text {
+        text-align: center;
+        font: 300 100% $Muli;
+        color: $text_color_second;
+        margin-bottom: 80px;
+    }
+    &__col {
+        width: calc(100%/3 - 100px);
+    }
+    &__card {
+        max-width: 100%;
+    }
+    &_theme_rectangle {
+        background: url(../images/bg-4.jpg) no-repeat;
+        background-size: cover;
+    }
+    &_height_100vh {
+        min-height: 100vh;
+    }
+}

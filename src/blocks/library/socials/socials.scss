@@ -7,6 +7,9 @@
         width: 30px;
         height: 30px;
         margin: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
         background: url(../images/sprite.png) no-repeat;
         &_fb {
             background-position: 8px 0;

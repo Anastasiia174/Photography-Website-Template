@@ -1,0 +1,10 @@
+<form class="feedback-form @@class">
+    <input class="feedback-form__input" type="text" placeholder="*Your name">
+    <input class="feedback-form__input" type="text" placeholder="*Your email">
+    <textarea class="feedback-form__input" name="message" id="" cols="30" rows="5" placeholder="Your message"></textarea>
+    @@include('../../utils/btn/btn.html', {
+        "class": "btn_yellow btn_uppercase",
+        "value": "send message",
+        "type": "submit"
+    })
+</form>

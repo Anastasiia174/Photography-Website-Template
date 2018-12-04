@@ -1,0 +1,87 @@
+<div class="footer footer_theme_dark">
+    <div class="footer__wrapper">
+        <div class="footer__col">
+            <div class="footer__logo">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts-title">
+                    Contacts
+                </div>
+                <div class="footer__contacts-address">
+                    <address>
+                        237 Church St, San Francisco,<br>
+                        CA 94114, USA <br>
+                        nazmulhasanjingar@gmail.com
+                    </address>
+                </div>
+            </div>
+            <div class="footer__socials">
+                <div class="footer__socials-title">
+                    Folow me on:
+                </div>
+                @@include('../socials/socials.html', {
+                    "class": ""
+                })
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__col-title">
+                Latest Blog Posts
+            </div>
+            <div class="footer__posts">
+                <a href="#">
+                    @@include('../small-article-card/small-article-card.html', {
+                        "img": "assets/images/fa-1.jpg",
+                        "text": "Design is the method of putting form and content together .",
+                        "category": "Life style",
+                        "date": "July 3, 2017"
+                    })
+                </a>
+                <a href="#">
+                    @@include('../small-article-card/small-article-card.html', {
+                        "img": "assets/images/fa-2.jpg",
+                        "text": "Design is the method of putting form and content together .",
+                        "category": "Life style",
+                        "date": "July 3, 2017"
+                    })
+                </a>
+                <a class="footer__posts-more" href="#">MORE...</a>
+            </div>
+        </div>
+        <div class="footer__col">
+            <div class="footer__col-title">
+                Quick Link
+            </div>
+            <ul class="footer__links">
+                <li class="footer__link">
+                    <a href="#">Home</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">About</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">Clients</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">Portfolio</a>
+                </li>
+                <li class="footer__link">
+                    <a href="#">Blog</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__col">
+            <div class="footer__col-title">
+                Instagram Update</div>
+            <div class="footer__inst">
+                <a href="#">
+                    <img class="footer__inst-img" src="assets/images/insta.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        All Rights @ 2017 By Nazmul Hasan Jingar
+    </div>
+</div>

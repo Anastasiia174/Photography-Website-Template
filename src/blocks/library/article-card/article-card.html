@@ -1,0 +1,25 @@
+<div class="article-card">
+    <div class="article-card__wrapper">
+        <div class="article-card__img-holder">
+            <img class="article-card__img" src="@@img">
+            </div>
+        <div class="article-card__content">
+            <div class="article-card__title">
+                @@title
+            </div>
+            <div class="article-card__info">
+                <span class="article-card__category">@@category</span>
+                <span class="article-card__date">@@date</span>
+            </div>
+            <div class="article-card__text">
+                @@text
+            </div>
+            <div class="article-card__btn">
+                @@include('../../utils/btn-article/btn-article.html', {
+                    "value": "Read More",
+                    "href": "#"
+                })
+            </div>
+        </div>
+    </div>
+</div>

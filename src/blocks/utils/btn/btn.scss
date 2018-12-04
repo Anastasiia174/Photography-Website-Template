@@ -11,10 +11,31 @@
     &_yellow {
         background-color: #F2C200;
         color: #433F51;
+        transition-property: background-color;
+        transition-duration: $tr-time;
+        &:hover {
+            background-color: #FFF;
+        }
     }
     &_dark {
         background-color: #2B2D5C;
         color: $text_color_main;
+        transition-property: background-color;
+        transition-duration: $tr-time;
+        &:hover {
+            background-color: rgba(77, 64, 124, 0.7);
+        }
+    }
+    &_transparent {
+        background-color: transparent;
+        color: #F2C200;
+        border: 1px solid #F2C200;
+        transition-property: background-color color;
+        transition-duration: $tr-time;
+        &:hover {
+            background-color: #F2C200;
+            color: #FFF;
+        }
     }
     &_uppercase {
         text-transform: uppercase;

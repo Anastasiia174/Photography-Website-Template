@@ -8,7 +8,12 @@ $Trirong: 'Trirong', serif;
     font-weight: 200;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Muli';
+    src: url('../fonts/Muli/Muli-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
 @font-face {
     font-family: 'Muli';
     src: url('../fonts/Muli/Muli-SemiBold.ttf') format('truetype');

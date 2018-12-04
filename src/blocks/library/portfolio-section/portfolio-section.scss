@@ -1,0 +1,35 @@
+.portfolio-section {
+    $blocks: &;
+    &__wrapper {
+        display: flex;
+        padding: 100px 0;
+        @include adaptive-tablet() {
+            flex-wrap: wrap;
+        }
+    }
+    &__aside {
+        max-width: 700px;
+        border: 1px solid #4D407C;
+        padding: 0 50px 50px 0;
+        @include adaptive-tablet() {
+            max-width: 100%;
+        }
+    }
+    &__content {
+        height: 100%;
+        padding: 150px 70px 50px;
+        background-color: #F2C200;
+    }
+    &__title {
+        font: 300 250% $Trirong;
+        margin-bottom: 60px;
+    }
+    &__text {
+        font: 300 120% $Muli;
+    }
+    &__galery {
+    }
+    &__btn {
+        margin: 50px 0 0 50px;
+    }
+}
