@@ -4,6 +4,15 @@
         width: 30%;
         margin: 0 auto;
         padding: 50px 0;
+        @include adaptive-desktop-sm() {
+            width: 70%;
+        }
+        @include adaptive-tablet() {
+            width: 90%;
+        }
+        @include adaptive-mobile() {
+            width: 90%;
+        }
     }
     &__title {
         text-align: center;

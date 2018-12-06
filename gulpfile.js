@@ -2,8 +2,11 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var sassGlob = require('gulp-sass-glob');
+var cleanCSS = require('gulp-clean-css');
 var autoprefixer = require('gulp-autoprefixer');
 var fileinclude = require('gulp-file-include');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 
 gulp.task('serve', ['sass'], function() {
     browserSync.init({
@@ -22,8 +25,22 @@ gulp.task('sass', function() {
         browsers: ['last 2 versions'],
         cascade: false
     }))
+    .pipe(rename({suffix: ".min"}))
+    .pipe(cleanCSS())
     .pipe(gulp.dest("app/assets/css/"))
     .pipe(browserSync.stream());
+});
+gulp.task('mincss', function() {
+    return gulp.src("app/assets/css/main.css")
+    .pipe(rename({suffix: ".min"}))
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("app/assets/css/"));
+});
+gulp.task('minjs', function() {
+    return gulp.src("src/scripts/scripts.js")
+    .pipe(rename({suffix: ".min"}))
+    .pipe(uglify())
+    .pipe(gulp.dest("app/assets/scripts/"));
 });
 gulp.task('fileinclude', function() {
     gulp.src("src/pages/index.html")
