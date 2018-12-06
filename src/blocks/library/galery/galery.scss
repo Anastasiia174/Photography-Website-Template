@@ -18,8 +18,14 @@
     }
     &__img-holder {
         margin: 0 20px 20px 0;
+        position: relative;
     }
     &__img {
-        
     }
+}
+
+.ya-share2 {
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
 }
