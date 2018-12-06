@@ -14,7 +14,7 @@ gulp.task('serve', ['sass'], function() {
     });
     gulp.watch("src/{blocks,pages,styles}/**/*.scss", ['sass']);
     gulp.watch("src/{blocks,pages}/**/*.html", ['fileinclude']);
-    //gulp.watch("app/*.html").on('change', browserSync.reload);
+    gulp.watch("src/scripts/scripts.js", ['minjs']);
 });
 
 gulp.task('sass', function() {
@@ -30,17 +30,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest("app/assets/css/"))
     .pipe(browserSync.stream());
 });
-gulp.task('mincss', function() {
-    return gulp.src("app/assets/css/main.css")
-    .pipe(rename({suffix: ".min"}))
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("app/assets/css/"));
-});
 gulp.task('minjs', function() {
     return gulp.src("src/scripts/scripts.js")
     .pipe(rename({suffix: ".min"}))
     .pipe(uglify())
-    .pipe(gulp.dest("app/assets/scripts/"));
+    .pipe(gulp.dest("app/assets/scripts/"))
+    .pipe(browserSync.stream());
 });
 gulp.task('fileinclude', function() {
     gulp.src("src/pages/index.html")
