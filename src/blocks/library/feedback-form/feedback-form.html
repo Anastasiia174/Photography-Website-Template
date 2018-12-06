@@ -1,6 +1,9 @@
-<form class="feedback-form @@class">
-    <input class="feedback-form__input" type="text" placeholder="*Your name">
-    <input class="feedback-form__input" type="text" placeholder="*Your email">
+<form id="feedback-form" class="feedback-form @@class">
+    <div class="feedback-form__msg-wrapper">
+        <p class="feedback-form__error-msg">Your form containes errors. Please fill in all required fields.</p>
+    </div>
+    <input class="feedback-form__input" name="name" type="text" placeholder="*Your name" title="Only latin letters" data-required="" data-pattern="^[a-zA-Z\s]+$">
+    <input class="feedback-form__input" name="email" type="text" placeholder="*Your email" title="For example email@gmail.com" data-required="" data-pattern="^\w+@\w+\.\w+$">
     <textarea class="feedback-form__input" name="message" id="" cols="30" rows="5" placeholder="Your message"></textarea>
     @@include('../../utils/btn/btn.html', {
         "class": "btn_yellow btn_uppercase",

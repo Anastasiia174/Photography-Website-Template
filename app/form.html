@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+</head>
+<body>
+    <div class="feedback-section feedback-section_theme_desktop">
+    <div class="feedback-section__wrapper">
+        <div class="feedback-section__title">
+            Let's work?
+        </div>
+        <div class="feedback-section__form">
+            <form id="feedback-form" class="feedback-form text-center">
+    <p class="feedback-form__error-msg">Your form contains mistakes.</p>
+    <input class="feedback-form__input" name="name" type="text" placeholder="*Your name" title="Only latin letters" data-required="" data-pattern="^[a-zA-Z\s]+$">
+    <input class="feedback-form__input" name="email" type="text" placeholder="*Your email" title="For example email@gmail.com" data-required="" data-pattern="^\w+@\w+\.\w+$">
+    <textarea class="feedback-form__input" name="message" id="" cols="30" rows="5" placeholder="Your message"></textarea>
+    <button type="submit">Send</button>
+        </div>
+    </div>
+</div>
+</form>
+<script type="text/javascript">
+    function validateForm(settings) {
+        var formId = settings.formId;
+        var formInvalidClass = settings.formInvalidClass;
+        var inputErrorClass = settings.inputErrorClass;
+
+        var form = document.getElementById(formId);
+
+        var inputs = Array.from(form.elements).filter(function(input) {
+            return /input/.test(input.className);
+        });
+
+        form.addEventListener('focus', function(event) {
+            var currentElement = event.target;
+            if (currentElement.classList.contains(inputErrorClass)) {
+                currentElement.classList.remove(inputErrorClass);
+            }
+        }, true);
+
+        form.addEventListener('blur', function(event) {
+            var currentElement = event.target;
+            if (!isValidElement(currentElement)) {
+                currentElement.classList.add(inputErrorClass);
+            }
+        }, true);
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var isValidForm = true;
+
+            inputs.forEach(function(input) {
+                var isValid = isValidElement(input);
+                var isRequired = isRequiredElement(input);
+
+                if (!isValid) {
+                    input.classList.add(inputErrorClass);
+                    isValidForm = false;
+                }
+                if (isRequired && input.value == '') {
+                    input.classList.add(inputErrorClass);
+                    isValidForm = false;
+                }
+            });
+
+            if (isValidForm) {
+                var formData = inputs.reduce(function(acc, item) {
+                    if (!acc.hasOwnProperty(item.name)) {
+                        acc[item.name] = item.value;
+                    }
+                    return acc;
+                }, {});
+                sendForm(formData);
+            } else {
+                form.classList.add(formInvalidClass);
+            }
+
+        });
+
+        function isRequiredElement(element) {
+            return element.dataset.hasOwnProperty('required') ? true : false;
+        }
+
+        function isValidElement(element) {
+            var isValid = true;
+            if (element.dataset.hasOwnProperty('pattern')) {
+                isValid = isValidRegexp(element);
+            }
+            return isValid;
+        }
+
+        function isValidRegexp(element) {
+            var reg = new RegExp(element.dataset.pattern);
+            return reg.test(element.value);
+        }
+
+    }
+
+    validateForm({
+        formId: 'feedback-form',
+        formInvalidClass: 'feedback-form_invalid',
+        inputErrorClass: 'feedback-form__input_invalid'
+    });
+
+
+    function sendForm(formData) {
+        $.ajax({
+            url: 'handler.php',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(formData),
+            success: function(data) {
+                alert(data);
+            }
+        });
+    }
+</script>
+</body>
+</html>

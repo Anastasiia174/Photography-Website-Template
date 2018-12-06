@@ -1,0 +1,25 @@
+.arrow {
+    $blocks: &;
+    display: inline-block;
+    &__icon {
+        width: 60px;
+        height: 60px;
+    }
+    &_rectangle {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255,255,255, 0.65);
+    }
+    &_down {
+        transform: rotate(-90deg);
+    }
+    &_up {
+        transform: rotate(90deg);
+    }
+    &_white {
+        fill: #FFF;
+    }
+    &_dark {
+        fill: #2B2D5C;
+    }
+}

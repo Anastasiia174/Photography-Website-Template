@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <title>Photography Portfolio Website</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/scripts.js"></script>
 </head>
 <body>
-    <div class="home-section home-section_theme_girl home-section_height_100vh">
+    <div id="home" class="home-section home-section_theme_girl home-section_height_100vh">
     <div class="home-section__wrapper">
         <div class="home-section__header">
             <div class="home-section__logo">
                 <img class="logo__img" src="assets/images/logo.png" alt="">
             </div>
             <div class="home-section__navbar">
-                 <ul class="navbar">
+                 <ul id="main-navbar" class="navbar">
     <li class="navbar__item">
-        <a class="navbar__link navbar__link_active" href=#>Home</a>
+        <a class="navbar__link navbar__link_active" href="#home">Home</a>
     </li>
     <li class="navbar__item">
-        <a class="navbar__link" href=#>About</a>
+        <a class="navbar__link" href="#about">About</a>
     </li>
     <li class="navbar__item">
-        <a class="navbar__link" href=#>Clients</a>
+        <a class="navbar__link" href="#clients">Clients</a>
     </li>
     <li class="navbar__item">
-        <a class="navbar__link" href=#>Portfolio</a>
+        <a class="navbar__link" href="#portfolio">Portfolio</a>
     </li>
     <li class="navbar__item">
-        <a class="navbar__link" href=#>Blog</a>
+        <a class="navbar__link" href="#blog">Blog</a>
     </li>
 </ul>
             </div>
@@ -44,7 +46,7 @@
             </a>
         </div>
         <div class="home-section__socials">
-            <div class="socials socials_right_bottom">
+            <div class="socials ">
     <a class="socials__link" target="blank" title="Facebook" href="#">
         <div class="socials__icon socials__icon_fb"></div>
     </a>
@@ -59,12 +61,18 @@
     </a>
 </div>
         </div>
-        <div class="home-section__btn-arrow">
-            <button class="btn-arrow"></button>
+        <div id="btn-arrow_down" class="home-section__btn-arrow">
+            <a href="#about">
+                <div class="arrow arrow_down arrow_white">
+    <svg class="arrow__icon">
+        <use xlink:href="assets/images/arrow.svg#arrow-icon"></use>
+    </svg>
+</div>
+            </a>
         </div>
     </div>
 </div>
-<div class="about-section about-section_theme_rectangle about-section_height_100vh">
+<div id="about" class="about-section about-section_theme_rectangle about-section_height_100vh">
     <div class="about-section__wrapper">
         <div class="about-section__aside">
             <img class="about-section__aside-pic" src="assets/images/about-pic.jpg" alt="">
@@ -84,21 +92,24 @@
     <div class="small-card__title">
         Fashion
     </div>
-    <div class="small-card__img" data-src="assets/images/small-card-1.jpg">
+    <div class="small-card__img-holder">
+        <img class="small-card__img" src="assets/images/small-card-1.jpg" alt="">
     </div>
 </div>
                 <div class="small-card small-card_mr_10">
     <div class="small-card__title">
         Portraites
     </div>
-    <div class="small-card__img" data-src="assets/images/small-card-2.jpg">
+    <div class="small-card__img-holder">
+        <img class="small-card__img" src="assets/images/small-card-2.jpg" alt="">
     </div>
 </div>
                 <div class="small-card small-card_mr_10">
     <div class="small-card__title">
         Lifestyle
     </div>
-    <div class="small-card__img" data-src="assets/images/small-card-3.jpg">
+    <div class="small-card__img-holder">
+        <img class="small-card__img" src="assets/images/small-card-3.jpg" alt="">
     </div>
 </div>
             </div>
@@ -110,7 +121,7 @@
         </div>
     </div>
 </div>
-<div class="clients-section clients-section_theme_hands">
+<div id="clients" class="clients-section clients-section_theme_hands">
     <div class="clients-section__wrapper">
         <div class="clients-section__title text-center">
             Happy Clients
@@ -124,7 +135,7 @@
         </div>
     </div>
 </div>
-<div class="portfolio-section">
+<div id="portfolio" class="portfolio-section">
     <div class="portfolio-section__wrapper">
         <div class="portfolio-section__aside">
             <div class="portfolio-section__content">
@@ -175,7 +186,7 @@
         </div>
     </div>
 </div>
-<div class="blog-section blog-section_theme_rectangle blog-section_height_100vh">
+<div id="blog" class="blog-section blog-section_theme_rectangle blog-section_height_100vh">
     <div class="blog-section__wrapper">
         <div class="blog-section__col">
             <div class="blog-section__card">
@@ -275,9 +286,12 @@
             Let's work?
         </div>
         <div class="feedback-section__form">
-            <form class="feedback-form text-center">
-    <input class="feedback-form__input" type="text" placeholder="*Your name">
-    <input class="feedback-form__input" type="text" placeholder="*Your email">
+            <form id="feedback-form" class="feedback-form text-center">
+    <div class="feedback-form__msg-wrapper">
+        <p class="feedback-form__error-msg">Your form containes errors. Please fill in all required fields.</p>
+    </div>
+    <input class="feedback-form__input" name="name" type="text" placeholder="*Your name" title="Only latin letters" data-required="" data-pattern="^[a-zA-Z\s]+$">
+    <input class="feedback-form__input" name="email" type="text" placeholder="*Your email" title="For example email@gmail.com" data-required="" data-pattern="^\w+@\w+\.\w+$">
     <textarea class="feedback-form__input" name="message" id="" cols="30" rows="5" placeholder="Your message"></textarea>
     <button class="btn btn_yellow btn_uppercase" type="submit">send message</button>
 </form>
@@ -359,7 +373,7 @@
     </div>
 </div>
                 </a>
-                <a class="footer__posts-more" href="#">MORE...</a>
+                <a class="footer__posts-more footer__link" href="#">MORE...</a>
             </div>
         </div>
         <div class="footer__col">
@@ -368,19 +382,19 @@
             </div>
             <ul class="footer__links">
                 <li class="footer__link">
-                    <a href="#">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li class="footer__link">
-                    <a href="#">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li class="footer__link">
-                    <a href="#">Clients</a>
+                    <a href="#clients">Clients</a>
                 </li>
                 <li class="footer__link">
-                    <a href="#">Portfolio</a>
+                    <a href="#portfolio">Portfolio</a>
                 </li>
                 <li class="footer__link">
-                    <a href="#">Blog</a>
+                    <a href="#blog">Blog</a>
                 </li>
             </ul>
         </div>
@@ -398,12 +412,22 @@
         All Rights @ 2017 By Nazmul Hasan Jingar
     </div>
 </div>
-    <script>
-        var smallCardsImages = Array.from(document.querySelectorAll('.small-card__img'));
-        smallCardsImages.forEach(function(card) {
-            card.style.backgroundImage = 'url(' + card.dataset.src + ')';
-        });
-
-    </script>
+<a class="scrollup" href="#">
+    <div class="arrow arrow_up arrow_dark arrow_rectangle">
+    <svg class="arrow__icon">
+        <use xlink:href="assets/images/arrow.svg#arrow-icon"></use>
+    </svg>
+</div>
+</a>
+<div class="popup">
+    <div class="popup__wrapper">
+        <div class="popup__window">
+            <div class="popup__message">
+                Message
+            </div>
+            <button class="popup__btn-close">x</button>
+        </div>
+    </div>
+</div>
 </body>
 </html>

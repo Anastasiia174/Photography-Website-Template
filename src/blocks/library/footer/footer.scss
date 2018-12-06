@@ -41,6 +41,9 @@
     }
     &__link {
         margin: 10px 0;
+        &:hover {
+            color: #BCB1E964;
+        }
     }
     &__inst {
         width: 80%;

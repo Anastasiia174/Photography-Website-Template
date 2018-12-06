@@ -1,4 +1,4 @@
-<div class="home-section home-section_theme_girl home-section_height_100vh">
+<div id="home" class="home-section home-section_theme_girl home-section_height_100vh">
     <div class="home-section__wrapper">
         <div class="home-section__header">
             <div class="home-section__logo">
@@ -25,11 +25,15 @@
         </div>
         <div class="home-section__socials">
             @@include('../socials/socials.html', {
-                "class": "socials_right_bottom"
+                "class": ""
             })
         </div>
-        <div class="home-section__btn-arrow">
-            @@include('../../utils/arrow/arrow.html')
+        <div id="btn-arrow_down" class="home-section__btn-arrow">
+            <a href="#about">
+                @@include('../../utils/arrow/arrow.html', {
+                "class": "arrow_down arrow_white"
+            })
+            </a>
         </div>
     </div>
 </div>

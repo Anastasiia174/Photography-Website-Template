@@ -30,6 +30,16 @@
         font: 300 120% $Muli;
         color: $text_color_main;
     }
+    &__socials {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+    }
+    &__btn-arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+    }
     &_theme_girl {
         background: url(../images/bg-1.jpg) no-repeat center;
         background-size: cover;

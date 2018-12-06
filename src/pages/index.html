@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <title>Photography Portfolio Website</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <script type="text/javascript" src="assets/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/scripts.js"></script>
 </head>
 <body>
     @@include('main/main.html')
-    <script>
-        var smallCardsImages = Array.from(document.querySelectorAll('.small-card__img'));
-        smallCardsImages.forEach(function(card) {
-            card.style.backgroundImage = 'url(' + card.dataset.src + ')';
-        });
-
-    </script>
 </body>
 </html>
